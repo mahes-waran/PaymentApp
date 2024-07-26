@@ -1,0 +1,21 @@
+export const Colors = {
+    primaryColor: '#002C71',
+    darkRed: '#C70303',
+    white: '#ffffff',
+    lightGray: '#f3f3f5',
+    lightBlue: '#5d82e9',
+    deepLightBlue: '#F2F1FE',
+    bagroundBlue: '#17338D',
+    lightSecondaryTxt: '#333333',
+    lightPrimBtn: '#b9d6f3',
+    lightSecondaryBtn: '#a1c9f1',
+    lightTransparent: '#000000a9',
+    black: '#1B1212',
+    lightBlack: '#444444',
+    deepLightBlack: '#636363',
+    lightestBlack: '#6E6E6E',
+    darkGray: '#AAAAAA',
+    appGray: '#F9F9F9',
+    imageGray: '#F6F6F6',
+    actionBtn: '#5D82E9'
+}
