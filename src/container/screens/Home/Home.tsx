@@ -31,12 +31,12 @@ const Home = (props: any) => {
     }
 
     const contacts = [
-        { id: 1, firstName: 'John', lastName: 'Doe', image: require('../../../assets/images/men_4.png') },
-        { id: 2, firstName: 'Jane', lastName: 'Smith', image: require('../../../assets/images/women_1.png') },
-        { id: 3, firstName: 'Sally', lastName: 'Martinez', image: require('../../../assets/images/men_2.png') },
-        { id: 4, firstName: 'Sidney', lastName: 'Johnson', image: require('../../../assets/images/women_2.png') },
-        { id: 5, firstName: 'Freddie', lastName: 'Collins', image: require('../../../assets/images/men_3.png') },
-        { id: 6, firstName: 'Pamel', lastName: 'Miller', image: require('../../../assets/images/women_3.png') },
+        { id: 1, firstName: 'John', lastName: 'Doe', image: require('../../../assets/images/men_4.png'), transName: 'Transfer' },
+        { id: 2, firstName: 'Jane', lastName: 'Smith', image: require('../../../assets/images/women_1.png'), transName: 'Transfer' },
+        { id: 3, firstName: 'Sally', lastName: 'Martinez', image: require('../../../assets/images/men_2.png'), transName: 'Transfer' },
+        { id: 4, firstName: 'Sidney', lastName: 'Johnson', image: require('../../../assets/images/women_2.png'), transName: 'Transfer' },
+        { id: 5, firstName: 'Freddie', lastName: 'Collins', image: require('../../../assets/images/men_3.png'), transName: 'Transfer' },
+        { id: 6, firstName: 'Pamel', lastName: 'Miller', image: require('../../../assets/images/women_3.png'), transName: 'Transfer' },
 
     ];
 
@@ -72,7 +72,7 @@ const Home = (props: any) => {
 
     const getContectDetails = (items: any) => {
         return (
-            <TouchableOpacity key={items.item.id} style={styles.contactContainer} onPress={() => props.navigation.navigate('Payment')}>
+            <TouchableOpacity key={items.item.id} style={styles.contactContainer} onPress={() => props.navigation.navigate('Payment', { image: items.item.image, transName: items.item.transName, firstName: items.item.firstName, lastName: items.item.lastName })}>
                 <Image source={items.item.image} style={styles.contactImage} />
                 <Text style={styles.transection}> {items.item.firstName}{'\n'}{items.item.lastName} </Text>
             </TouchableOpacity>

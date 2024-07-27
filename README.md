@@ -76,7 +76,7 @@ yarn ios
 ## Usage:
 # ScreenShot
 
-<img width=200 height=250 src="./screenshot/Dashboard.png" style="border:5px solid black padding:5px"> <img width=200 height=250 src="./screenshot/Dashboard_1.png" style="border:5px solid black padding:5px"> <img width=200 height=250 src="./screenshot/Contacts.png" style="border:5px solid black padding:5px"> <img width=200 height=250 src="./screenshot/Scanner.png" style="border:5px solid black padding:5px"> 
+<img width=200 height=250 src="./screenshot/Dashboard.png" style="border:5px solid black padding:5px"> <img width=200 height=250 src="./screenshot/Dashboard_1.png" style="border:5px solid black padding:5px"> <img width=200 height=250 src="./screenshot/Contacts.png" style="border:5px solid black padding:5px"> <img width=200 height=250 src="./screenshot/Scanner.png" style="border:5px solid black padding:5px"> <img width=200 height=250 src="./screenshot/Payment.png" style="border:5px solid black padding:5px">
 
 ### Contributing
 Umamaheswaran K
