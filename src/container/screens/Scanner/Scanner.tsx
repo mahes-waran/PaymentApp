@@ -124,8 +124,8 @@ const Scanner = (navigation: any) => {
                     <Image
                         source={
                             torchOn
-                                ? require('../../../assets/images/flashlight_on.png')
-                                : require('../../../assets/images/torch_off.png')
+                                ? require('../../../assets/images/flashlight_on.jpg')
+                                : require('../../../assets/images/torch_off.jpg')
                         }
                         style={styles.buttonImage}
                     />

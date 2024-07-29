@@ -7,14 +7,14 @@ import { fontFamily } from '../../../lib/globals';
 
 const Contacts = () => {
     const recentContacts = [
-        { id: 1, name: 'Jane Smith', image: require('../../../assets/images/women_1.png'), contact: 'Bank', mobile: '098734228756' },
-        { id: 2, name: 'Sally Martinez', image: require('../../../assets/images/men_2.png'), contact: 'Bank', mobile: '098734228756' },
-        { id: 3, name: 'Sidney Johnson', image: require('../../../assets/images/women_2.png'), contact: 'Bank', mobile: '098734228756' },
+        { id: 1, name: 'Jane Smith', image: require('../../../assets/images/women_1.jpg'), contact: 'Bank', mobile: '098734228756' },
+        { id: 2, name: 'Sally Martinez', image: require('../../../assets/images/men_2.jpg'), contact: 'Bank', mobile: '098734228756' },
+        { id: 3, name: 'Sidney Johnson', image: require('../../../assets/images/women_2.jpg'), contact: 'Bank', mobile: '098734228756' },
     ]
     const allContacts = [
-        { id: 1, name: 'Marion Garrett', image: require('../../../assets/images/women_3.png'), contact: 'Bank', mobile: '098734228756' },
-        { id: 2, name: 'Andrea Summer', image: require('../../../assets/images/women_4.png'), contact: 'Bank', mobile: '098734228756' },
-        { id: 3, name: 'karen William', image: require('../../../assets/images/women_5.png'), contact: 'Bank', mobile: '098734228756' },
+        { id: 1, name: 'Marion Garrett', image: require('../../../assets/images/women_3.jpg'), contact: 'Bank', mobile: '098734228756' },
+        { id: 2, name: 'Andrea Summer', image: require('../../../assets/images/women_4.jpg'), contact: 'Bank', mobile: '098734228756' },
+        { id: 3, name: 'karen William', image: require('../../../assets/images/women_5.jpg'), contact: 'Bank', mobile: '098734228756' },
     ]
 
     const getRecentContacts = (items: any) => {

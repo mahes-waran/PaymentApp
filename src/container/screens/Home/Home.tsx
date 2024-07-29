@@ -31,18 +31,18 @@ const Home = (props: any) => {
     }
 
     const contacts = [
-        { id: 1, firstName: 'John', lastName: 'Doe', image: require('../../../assets/images/men_4.png'), transName: 'Transfer' },
-        { id: 2, firstName: 'Jane', lastName: 'Smith', image: require('../../../assets/images/women_1.png'), transName: 'Transfer' },
-        { id: 3, firstName: 'Sally', lastName: 'Martinez', image: require('../../../assets/images/men_2.png'), transName: 'Transfer' },
-        { id: 4, firstName: 'Sidney', lastName: 'Johnson', image: require('../../../assets/images/women_2.png'), transName: 'Transfer' },
-        { id: 5, firstName: 'Freddie', lastName: 'Collins', image: require('../../../assets/images/men_3.png'), transName: 'Transfer' },
-        { id: 6, firstName: 'Pamel', lastName: 'Miller', image: require('../../../assets/images/women_3.png'), transName: 'Transfer' },
+        { id: 1, firstName: 'John', lastName: 'Doe', image: require('../../../assets/images/men_4.jpg'), transName: 'Transfer' },
+        { id: 2, firstName: 'Jane', lastName: 'Smith', image: require('../../../assets/images/women_1.jpg'), transName: 'Transfer' },
+        { id: 3, firstName: 'Sally', lastName: 'Martinez', image: require('../../../assets/images/men_2.jpg'), transName: 'Transfer' },
+        { id: 4, firstName: 'Sidney', lastName: 'Johnson', image: require('../../../assets/images/women_2.jpg'), transName: 'Transfer' },
+        { id: 5, firstName: 'Freddie', lastName: 'Collins', image: require('../../../assets/images/men_3.jpg'), transName: 'Transfer' },
+        { id: 6, firstName: 'Pamel', lastName: 'Miller', image: require('../../../assets/images/women_3.jpg'), transName: 'Transfer' },
 
     ];
 
     const transactions = [
-        { id: 1, name: 'Marion Garrett', place: 'New York', amount: '-$120.50', time: '21:15', transName: 'Transfer', image: require('../../../assets/images/women_5.png') },
-        { id: 2, name: 'Burger King', place: 'New York', amount: '-$35.17', time: '16:57', transName: 'Restaurant', image: require('../../../assets/images/burger.png') },
+        { id: 1, name: 'Marion Garrett', place: 'New York', amount: '-$120.50', time: '21:15', transName: 'Transfer', image: require('../../../assets/images/women_5.jpg') },
+        { id: 2, name: 'Burger King', place: 'New York', amount: '-$35.17', time: '16:57', transName: 'Restaurant', image: require('../../../assets/images/burger.jpg') },
     ];
 
     const CustomCard = (item: any) => {
@@ -101,7 +101,7 @@ const Home = (props: any) => {
             <ScrollView>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 10 }}>
                     <View style={{ flexDirection: 'row' }}>
-                        <Image source={require('../../../assets/images/men_1.png')} style={styles.profileImage} />
+                        <Image source={require('../../../assets/images/men_1.jpg')} style={styles.profileImage} />
                         <View style={styles.balanceContainer}>
                             <Text style={styles.balanceText}>Total balance</Text>
                             <Text style={styles.balanceTextAmount}>$7,517.06</Text>
