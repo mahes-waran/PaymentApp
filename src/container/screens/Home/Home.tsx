@@ -3,9 +3,9 @@ import { View, Text, FlatList, StyleSheet, Image, ScrollView, SafeAreaView, Dime
 import Icon from 'react-native-vector-icons/Ionicons';
 import Carousel from 'react-native-reanimated-carousel';
 import 'react-native-gesture-handler';
-import { fontFamily } from '../../../lib/globals';
+import { fontFamily, getRandomFloatNumber, getRandomNumber } from '../../../lib/globals';
 import { Colors } from '../../../assets/styles/colors/colors';
-import { queryAllRealmObject } from '../../../database';
+import { insertNewRealmObject, queryAllRealmObject } from '../../../database';
 import { CARDINFO } from '../../../database/allSchemas';
 
 
@@ -20,14 +20,47 @@ const Home = (props: any) => {
         fetchDataRealm()
     }, [])
 
-    const fetchDataRealm = () => {
+    const fetchDataRealm = async () => {
         //console.log('fetchDataRealm:')
-        queryAllRealmObject(CARDINFO)
+        await queryAllRealmObject(CARDINFO)
             .then((data: any) => {
                 const res: any = data
-                //  console.log('fetchDataRealm:', res)
-                setCardData(res)
+                if (res && res.length > 0) {
+                   // console.log('fetchDataRealm:', res)
+                    setCardData(res)
+                } else {
+                    getCardDetails()
+                }
             });
+    }
+
+    const getCardDetails = async () => {
+        try {
+            const response = await fetch('https://c0ad2948-b731-4667-88e6-ab00dd4d0eda.mock.pstmn.io/cardart')
+            const result = await response.json()
+            var resultData: any = []
+            result.data.cardart.map((item: any) => {
+                let values: any = {
+                    cardName: 'Debit Card',
+                    cardType: 'Visa',
+                    price: getRandomFloatNumber(),
+                    cardNumber: Number(getRandomNumber()),
+                    expiryDate: '07/27',
+                    imgUrl: item.url,
+                    id: Number(item.id),
+                    time: new Date(),
+                }
+                console.log(values)
+                insertNewRealmObject(values, CARDINFO).then((res) => {
+                    console.log('inserted successfully')
+                });
+                resultData.push(values)
+            })
+            setCardData(resultData)
+
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const contacts = [

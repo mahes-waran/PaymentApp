@@ -147,7 +147,12 @@ const styles = StyleSheet.create({
     profileImage: {
         width: 80,
         height: 80,
-        alignItems: 'center'
+        alignItems: 'center',
+        borderRadius: 40,
+        borderWidth: 1,
+        borderColor: Colors.darkGray,
+        backgroundColor: Colors.white,
+        padding: 10
     },
     imgContainer: {
         flexDirection: 'row',

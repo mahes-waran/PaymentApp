@@ -3,24 +3,27 @@ import { FlatList, Image, SafeAreaView, ScrollView, StyleSheet, Text, TextInput,
 import { Colors } from '../../../assets/styles/colors/colors';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { fontFamily } from '../../../lib/globals';
+import { useNavigation } from '@react-navigation/native';
 
 
-const Contacts = () => {
+const Contacts = (props: any) => {
+    // const navigation = useNavigation()
+
     const recentContacts = [
-        { id: 1, name: 'Jane Smith', image: require('../../../assets/images/women_1.jpg'), contact: 'Bank', mobile: '098734228756' },
-        { id: 2, name: 'Sally Martinez', image: require('../../../assets/images/men_2.jpg'), contact: 'Bank', mobile: '098734228756' },
-        { id: 3, name: 'Sidney Johnson', image: require('../../../assets/images/women_2.jpg'), contact: 'Bank', mobile: '098734228756' },
+        { id: 1, name: 'Jane Smith', image: require('../../../assets/images/women_1.jpg'), contact: 'Bank', mobile: '098734228756', transName: 'Transfer' },
+        { id: 2, name: 'Sally Martinez', image: require('../../../assets/images/men_2.jpg'), contact: 'Bank', mobile: '098734228756', transName: 'Transfer' },
+        { id: 3, name: 'Sidney Johnson', image: require('../../../assets/images/women_2.jpg'), contact: 'Bank', mobile: '098734228756', transName: 'Transfer' },
     ]
     const allContacts = [
-        { id: 1, name: 'Marion Garrett', image: require('../../../assets/images/women_3.jpg'), contact: 'Bank', mobile: '098734228756' },
-        { id: 2, name: 'Andrea Summer', image: require('../../../assets/images/women_4.jpg'), contact: 'Bank', mobile: '098734228756' },
-        { id: 3, name: 'karen William', image: require('../../../assets/images/women_5.jpg'), contact: 'Bank', mobile: '098734228756' },
+        { id: 1, name: 'Marion Garrett', image: require('../../../assets/images/women_3.jpg'), contact: 'Bank', mobile: '098734228756', transName: 'Transfer' },
+        { id: 2, name: 'Andrea Summer', image: require('../../../assets/images/women_4.jpg'), contact: 'Bank', mobile: '098734228756', transName: 'Transfer' },
+        { id: 3, name: 'karen William', image: require('../../../assets/images/women_5.jpg'), contact: 'Bank', mobile: '098734228756', transName: 'Transfer' },
     ]
 
     const getRecentContacts = (items: any) => {
         return (
             <View style={styles.contactCotainer}>
-                <TouchableOpacity style={{ flexDirection: 'row' }} onPress={() => console.log('onPress')}>
+                <TouchableOpacity style={{ flexDirection: 'row' }} onPress={() => props.navigation.navigate('Payment', { image: items.item.image, transName: items.item.transName, firstName: items.item.name, lastName: items.item.lastName })}  >
                     <Image source={items.item.image} style={styles.contactImage} />
                     <View style={styles.nameContainer}>
                         <Text style={styles.nameText}>{items.item.name}</Text>
