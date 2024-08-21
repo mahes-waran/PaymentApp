@@ -20,8 +20,8 @@ Pay using a barcode scanner and payment gateway.
 ### Setup
 ## Step 1: Start the Metro Server
 ```bash
-git clone https://github.com/mahes-waran/BluetoothApp.git
-cd BluetoothApp
+git clone https://github.com/mahes-waran/PaymentApp.git
+cd PaymentApp
 npm install
 # using npm
 npm start
